@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgb(110, 109, 107);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.controls button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #53c357e4, #62ba66);
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.controls button:hover {
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
+
+.audio-info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgb(110, 109, 107);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connection-status {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.connected {
+    background: rgba(102, 218, 105, 0.972);
+    color: #279b2a;
+    border: 1px solid #4CAF50;
+}
+
+.disconnected {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+.mic-data {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.direction-indicator {
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.direction-indicator.center {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.direction-indicator.left {
+    background: rgba(255, 152, 0, 0.2);
+    color: #FF9800;
+    border: 1px solid #FF9800;
+}
+
+.direction-indicator.right {
+    background: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+    border: 1px solid #2196F3;
+}
+
+input[type="text"] {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #4CAF50;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
