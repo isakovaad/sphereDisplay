@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meeting Room with Real-time Audio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="controls">
+    <button id="addPersonBtn">➕ Add Person</button>
+    <button id="changeShapeBtn">🔁 Change Shape</button>
+    <button id="changeCableBtn">🔽 Change Stand Height</button>
+    <button id="connectBtn">🔌 Connect to ESP32</button>
+  </div>
+
+  <div class="audio-info">
+    <div id="connectionStatus" class="connection-status disconnected">
+      Disconnected
+    </div>
+    <div class="mic-data">Left Mic: <span id="leftMicValue">-- dB</span></div>
+    <div class="mic-data">Right Mic: <span id="rightMicValue">-- dB</span></div>
+    <div class="mic-data">Difference: <span id="differenceValue">-- dB</span></div>
+    <div id="directionIndicator" class="direction-indicator center">
+      🎯 CENTERED
+    </div>
+    <div style="margin-top: 10px; font-size: 12px;">
+      ESP32 IP: <input type="text" id="esp32IP" value="192.168.0.110" style="width: 120px;">
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
