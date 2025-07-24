@@ -2,32 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Meeting Room with Real-time Audio</title>
+  <title>Meeting Room with Audio & CO2 Visualization</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="controls">
+    <h3>🎛️ Meeting Room Controls</h3>
+    
     <button id="addPersonBtn">➕ Add Person</button>
     <button id="changeShapeBtn">🔁 Change Shape</button>
     <button id="changeCableBtn">🔽 Change Stand Height</button>
     <button id="connectBtn">🔌 Connect to ESP32</button>
+    <button id="loadDataBtn">📊 Load Real Data</button>
   </div>
 
-  <div class="audio-info">
+  <!-- Visualization selector moved to bottom -->
+  <div class="visualization-selector">
+    <h4>🎨 Visualization Mode</h4>
+    <div class="viz-options">
+      <div class="viz-option active" data-mode="audio">
+        <span class="emoji">🎵</span>
+        <span>Audio 3D</span>
+      </div>
+      <div class="viz-option" data-mode="co2">
+        <span class="emoji">🌬️</span>
+        <span>CO2 3D</span>
+      </div>
+      <div class="viz-option" data-mode="particles">
+        <span class="emoji">✨</span>
+        <span>Particles</span>
+      </div>
+      <div class="viz-option" data-mode="waves">
+        <span class="emoji">🌊</span>
+        <span>Waves</span>
+      </div>
+      <div class="viz-option" data-mode="stereo">
+        <span class="emoji">📊</span>
+        <span>Stereo Chart</span>
+      </div>
+      <div class="viz-option" data-mode="activity">
+        <span class="emoji">📈</span>
+        <span>Activity</span>
+      </div>
+      <div class="viz-option" data-mode="balance">
+        <span class="emoji">⚖️</span>
+        <span>Balance</span>
+      </div>
+      <div class="viz-option" data-mode="heatmap">
+        <span class="emoji">🔥</span>
+        <span>Heatmap</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart visualization overlay (hidden by default) -->
+  <div id="chartOverlay" class="chart-overlay hidden">
+    <div class="chart-container-overlay">
+      <button id="closeChart" class="close-button">✕</button>
+      <h3 id="chartTitle" class="chart-title-overlay">Chart Visualization</h3>
+      <p id="chartSubtitle" class="chart-subtitle-overlay">Detailed data analysis</p>
+      <canvas id="dynamicChart"></canvas>
+    </div>
+  </div>
+
+  <div class="data-info">
     <div id="connectionStatus" class="connection-status disconnected">
       Disconnected
     </div>
-    <div class="mic-data">Left Mic: <span id="leftMicValue">-- dB</span></div>
-    <div class="mic-data">Right Mic: <span id="rightMicValue">-- dB</span></div>
-    <div class="mic-data">Difference: <span id="differenceValue">-- dB</span></div>
-    <div id="directionIndicator" class="direction-indicator center">
-      🎯 CENTERED
+
+    <!-- Audio Data Display -->
+    <div id="audioDataDisplay">
+      <h4>🎵 Audio Data</h4>
+      <div class="data-display">Left Mic: <span id="leftMicValue">-- dB</span></div>
+      <div class="data-display">Right Mic: <span id="rightMicValue">-- dB</span></div>
+      <div class="data-display">Difference: <span id="differenceValue">-- dB</span></div>
+      <div class="data-display">Data Source: <span id="dataSource">Demo Mode</span></div>
+      <div id="directionIndicator" class="direction-indicator center">
+        🎯 CENTERED
+      </div>
     </div>
-    <div style="margin-top: 10px; font-size: 12px;">
-      ESP32 IP: <input type="text" id="esp32IP" value="192.168.0.110" style="width: 120px;">
+
+    <!-- CO2 Data Display -->
+    <div id="co2DataDisplay" class="hidden">
+      <h4>🌬️ CO2 Data</h4>
+      <div class="data-display">CO2 Level: <span id="co2Value">-- ppm</span></div>
+      <div class="data-display">Trend: <span id="co2Trend">--</span></div>
+      <div class="data-display">Change: <span id="co2Change">-- ppm/min</span></div>
+      <div id="co2Indicator" class="co2-indicator co2-good">
+        🌱 GOOD AIR QUALITY
+      </div>
+    </div>
+
+    <div style="margin-top: 15px; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;">
+      ESP32 IP: <input type="text" id="esp32IP" value="192.168.0.110">
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <script type="module" src="main.js"></script>
 </body>
 </html>
