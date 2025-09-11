@@ -1,0 +1,17 @@
+Meeting Analytics ML Models Summary
+==================================================
+
+Generated on: 2025-08-12 18:54:26
+Dataset size: 960 samples
+Feature count: 39
+
+Trained Models:
+  Speaker Count
+  Meeting Type
+  Energy Level
+  Engagement Score
+
+Label Encodings:
+  speaker_count: ['1', '2', '3+']
+  meeting_type: ['argument', 'brainstorm', 'discussion', 'presentation']
+  energy_level: ['high', 'low', 'medium']
