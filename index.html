@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="controls">
-    <h3>🎛️ Meeting Room Controls</h3>
+    <h3>Meeting Room Controls</h3>
     
     <button id="addPersonBtn">➕ Add Person</button>
     <button id="changeShapeBtn">🔁 Change Shape</button>
@@ -24,14 +24,6 @@
         <span class="emoji">🎵</span>
         <span>Audio 3D</span>
       </div>
-      <div class="viz-option" data-mode="co2">
-        <span class="emoji">🌬️</span>
-        <span>CO2 3D</span>
-      </div>
-      <div class="viz-option" data-mode="particles">
-        <span class="emoji">✨</span>
-        <span>Particles</span>
-      </div>
       <div class="viz-option" data-mode="waves">
         <span class="emoji">🌊</span>
         <span>Waves</span>
@@ -43,14 +35,6 @@
       <div class="viz-option" data-mode="activity">
         <span class="emoji">📈</span>
         <span>Activity</span>
-      </div>
-      <div class="viz-option" data-mode="balance">
-        <span class="emoji">⚖️</span>
-        <span>Balance</span>
-      </div>
-      <div class="viz-option" data-mode="heatmap">
-        <span class="emoji">🔥</span>
-        <span>Heatmap</span>
       </div>
     </div>
   </div>
@@ -79,17 +63,6 @@
       <div class="data-display">Data Source: <span id="dataSource">Demo Mode</span></div>
       <div id="directionIndicator" class="direction-indicator center">
         🎯 CENTERED
-      </div>
-    </div>
-
-    <!-- CO2 Data Display -->
-    <div id="co2DataDisplay" class="hidden">
-      <h4>🌬️ CO2 Data</h4>
-      <div class="data-display">CO2 Level: <span id="co2Value">-- ppm</span></div>
-      <div class="data-display">Trend: <span id="co2Trend">--</span></div>
-      <div class="data-display">Change: <span id="co2Change">-- ppm/min</span></div>
-      <div id="co2Indicator" class="co2-indicator co2-good">
-        🌱 GOOD AIR QUALITY
       </div>
     </div>
 

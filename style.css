@@ -7,41 +7,41 @@ body {
 }
 
 .controls {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  background: rgba(42, 42, 42, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  color: white;
-  width: 280px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+ position: fixed;
+ bottom: 20px; /* Changed from top: 20px */
+ left: 20px;
+ z-index: 1000;
+ background: rgba(42, 42, 42, 0.95);
+ padding: 15px; 
+ border-radius: 12px; 
+ color: white;
+ width: 240px; 
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .controls h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
+ margin-top: 0;
+ margin-bottom: 12px; 
+ color: #fff;
+ font-size: 14px; 
+ text-align: center;
 }
 
 .controls button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: linear-gradient(45deg, #53c357e4, #62ba66);
-  color: white;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+ width: 100%;
+ padding: 10px; 
+ border: none;
+ border-radius: 6px; 
+ font-size: 13px; 
+ font-weight: 600;
+ margin-bottom: 8px; 
+ cursor: pointer;
+ transition: all 0.3s ease;
+ background: linear-gradient(45deg, #53c357e4, #62ba66);
+ color: white;
+ box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
 .controls button:hover {
@@ -54,7 +54,7 @@ body {
   transform: translateY(0);
 }
 
-/* Visualization selector moved to bottom */
+/* Visualization selector */
 .visualization-selector {
   position: fixed;
   bottom: 20px;
@@ -63,38 +63,40 @@ body {
   z-index: 1000;
   background: rgba(42, 42, 42, 0.95);
   border-radius: 15px;
-  padding: 20px;
+  padding: 15px 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   width: auto;
-  min-width: 400px;
+  min-width: 500px; /* Reduced from 650px ещ 500for 4 items */
 }
 
+
 .visualization-selector h4 {
-  margin: 0 0 15px 0;
-  font-size: 16px;
+  margin: 0 0 12px 0; /* Reduced margin */
+  font-size: 14px; /* Slightly smaller */
   color: #fff;
   text-align: center;
 }
 
 .viz-options {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr); /* Changed from 6 to 4 */
+  grid-template-rows: 1fr;
+  gap: 14px; /* Slightly increased gap since we have more space */
 }
 
 .viz-option {
-  padding: 15px 10px;
+  padding: 12px 10px; /* Slightly increased padding */
   border: 2px solid transparent;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   background: rgba(255, 255, 255, 0.1);
-  min-width: 80px;
+  min-width: 80px; /* Slightly increased min-width */
+  color: white;
 }
 
 .viz-option:hover {
@@ -108,39 +110,39 @@ body {
 }
 
 .viz-option .emoji {
-  font-size: 24px;
+  font-size: 20px; /* Reduced emoji size */
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px; /* Reduced margin */
 }
 
 .data-info {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: rgba(42, 42, 42, 0.95);
-  padding: 20px;
-  border-radius: 15px;
-  color: white;
-  width: 280px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+ position: fixed;
+ bottom: 20px; /* Changed from top: 20px */
+ right: 20px;
+ z-index: 1000;
+ background: rgba(42, 42, 42, 0.95);
+ padding: 15px;
+ border-radius: 12px;
+ color: white;
+ width: 240px;
+ backdrop-filter: blur(10px);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .data-info h4 {
-  margin: 0 0 10px 0;
-  font-size: 14px;
-  color: #fff;
+ margin: 0 0 8px 0;
+ font-size: 13px;
+ color: #fff;
 }
 
 .connection-status {
-  padding: 10px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 16px;
+ padding: 8px;
+ border-radius: 6px;
+ font-weight: 600;
+ text-align: center;
+ margin-bottom: 12px;
+ font-size: 14px;
 }
 
 .connected {
@@ -156,21 +158,21 @@ body {
 }
 
 .data-display {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 12px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+ background: rgba(255, 255, 255, 0.1);
+ padding: 6px 10px;
+ border-radius: 5px;
+ margin-bottom: 6px;
+ font-size: 13px;
+ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .direction-indicator {
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  margin: 15px 0;
+ padding: 10px;
+ border-radius: 6px;
+ text-align: center;
+ font-weight: bold;
+ font-size: 13px;
+ margin: 12px 0;
 }
 
 .direction-indicator.center {
@@ -189,39 +191,6 @@ body {
   background: rgba(33, 150, 243, 0.2);
   color: #2196F3;
   border: 1px solid #2196F3;
-}
-
-.co2-indicator {
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  margin: 15px 0;
-}
-
-.co2-good {
-  background: rgba(76, 175, 80, 0.2);
-  color: #4CAF50;
-  border: 1px solid #4CAF50;
-}
-
-.co2-moderate {
-  background: rgba(255, 193, 7, 0.2);
-  color: #FFC107;
-  border: 1px solid #FFC107;
-}
-
-.co2-poor {
-  background: rgba(255, 87, 34, 0.2);
-  color: #FF5722;
-  border: 1px solid #FF5722;
-}
-
-.co2-bad {
-  background: rgba(244, 67, 54, 0.2);
-  color: #f44336;
-  border: 1px solid #f44336;
 }
 
 input[type="text"] {
@@ -343,6 +312,7 @@ input[type="text"]::placeholder {
   max-height: 500px;
   width: 100%;
 }
+
 @media (max-width: 768px) {
   .controls, .data-info {
     width: 250px;
@@ -364,3 +334,5 @@ input[type="text"]::placeholder {
     font-size: 13px;
   }
 }
+
+
