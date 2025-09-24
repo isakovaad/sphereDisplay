@@ -1,0 +1,25 @@
+2025-08-13 16:42:44,312 - __main__ - INFO - Initializing ML Model Server
+2025-08-13 16:42:44,312 - __main__ - INFO - Models directory: trained_models
+2025-08-13 16:42:44,312 - __main__ - INFO - Server address: localhost:8765
+2025-08-13 16:42:44,312 - __main__ - INFO - 🚀 Starting ML Model Server on localhost:8765
+2025-08-13 16:42:44,313 - __main__ - INFO - Loading models with timestamp: 20250812_185426
+2025-08-13 16:43:07,800 - __main__ - INFO - ✓ Loaded meeting_type_model model
+2025-08-13 16:43:07,802 - __main__ - INFO - ✓ Loaded energy_level_model model
+2025-08-13 16:43:07,810 - __main__ - INFO - ✓ Loaded speaker_count_model model
+2025-08-13 16:43:07,811 - __main__ - ERROR - Failed to load model trained_models/engagement_score_model_20250812_185426.pkl: Can't get attribute '__pyx_unpickle_CyHalfSquaredError' on <module 'sklearn._loss._loss' from '/Users/eesaack/Documents/GitHub/sphereDisplay/ml_env/lib/python3.13/site-packages/sklearn/_loss/_loss.cpython-313-darwin.so'>
+2025-08-13 16:43:07,811 - __main__ - INFO - ✓ Loaded label encoders (3 encoders)
+2025-08-13 16:43:07,811 - __main__ - INFO - ✓ Loaded feature scalers (4 scalers)
+2025-08-13 16:43:07,811 - __main__ - INFO - ✓ Loaded feature columns (39 features)
+2025-08-13 16:43:07,811 - __main__ - INFO - ✅ Successfully loaded 3 models
+2025-08-13 16:43:07,812 - __main__ - INFO - 📊 Available models: ['meeting_type_model', 'energy_level_model', 'speaker_count_model']
+2025-08-13 16:43:07,812 - __main__ - INFO - 📊 Loaded models: ['meeting_type_model', 'energy_level_model', 'speaker_count_model']
+2025-08-13 16:43:07,812 - __main__ - INFO - 🔧 Prediction interval: 5.0s
+2025-08-13 16:43:07,812 - __main__ - INFO - 📈 Feature count: 39
+2025-08-13 16:43:07,966 - websockets.server - INFO - server listening on [::1]:8765
+2025-08-13 16:43:07,966 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-08-13 16:43:07,966 - __main__ - INFO - ✅ ML Model Server is running...
+2025-08-13 16:43:07,966 - __main__ - INFO - 🌐 Connect your web interface to: ws://localhost:8765
+2025-08-13 16:43:07,966 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-08-13 16:44:47,609 - websockets.server - INFO - server closing
+2025-08-13 16:44:47,609 - websockets.server - INFO - server closed
+2025-08-13 16:44:47,610 - __main__ - INFO - 🛑 Server stopped by user
