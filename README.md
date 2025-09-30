@@ -5,7 +5,7 @@ Erasmus Mundus Joint Master's Degree in Big Data Management and Analytics
 LISN & Inria AVIZ
 
 > A Multi-Modal Machine Learning Approach for Spatial Audio-Visual Analytics in Meeting Room Environments
-
+> 
 ---
 
 ## Table of Contents
