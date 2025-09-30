@@ -1310,7 +1310,7 @@ git push origin main
 
 ### For Embedded Systems Development
 
-1. **ESP32 Official Documentation**: https://docs.espressif.com/
+1. **ESP32 Official Documentation**: https://docs.espressif.com/, https://documentation.espressif.com/en/home
 2. **Book**: "Programming ESP32 with Arduino IDE" by Kolban
 3. **Forum**: ESP32.com community forums
 
