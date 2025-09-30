@@ -62,7 +62,7 @@ This thesis addresses three primary research questions:
 
 ## System Architecture
 
-<img src="systemA.png" alt="System Architecture" width="400">
+<img src="systemA.png" alt="System Architecture" width="800">
 
 
 ```
