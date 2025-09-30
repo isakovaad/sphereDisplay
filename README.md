@@ -62,6 +62,9 @@ This thesis addresses three primary research questions:
 
 ## System Architecture
 
+<img src="systemA.png" alt="System Architecture" width="400">
+
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Meeting Room Environment                 │
